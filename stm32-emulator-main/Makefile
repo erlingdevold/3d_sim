@@ -23,7 +23,7 @@ OUTPUT_NAME :=  stm32-emulator
 INSTALL_DIR := ..
 
 # Define the source directory
-SRC_DIR := stm32-emulator-sim
+SRC_DIR := src
 
 # Define the build directory
 BUILD_DIR := target
@@ -48,7 +48,12 @@ clean:
 	$(CARGO) clean
 	rm -rf $(BUILD_DIR)
 
-clean-src:
+clean-src: clean
 	rm -rf $(SRC_DIR)
+	rm -rf .
+	
+
+
+	
 
 .PHONY: all build install uninstall clean clean-src

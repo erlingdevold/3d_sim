@@ -37,5 +37,13 @@ make install
 
 echo "Installation complete."
 make clean
-make clean-src
+
+if $1 == 'clean'
+then
+    echo "Cleaning up all source code for the task"
+    make clean
+    make clean-src
+    echo "Cleaned up."
+fi
+
 cd ..
