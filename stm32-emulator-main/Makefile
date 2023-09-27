@@ -48,12 +48,5 @@ clean:
 	$(CARGO) clean
 	rm -rf $(BUILD_DIR)
 
-clean-src: clean
-	rm -rf $(SRC_DIR)
-	rm -rf .
-	
 
-
-	
-
-.PHONY: all build install uninstall clean clean-src
+.PHONY: all build install uninstall clean

@@ -36,14 +36,14 @@ make clean
 make install
 
 echo "Installation complete."
-make clean
 
+cd ..
 if $1 == 'clean'
 then
     echo "Cleaning up all source code for the task"
-    make clean
-    make clean-src
+    rm -rf stm32-emulator-main
+    rm install.sh
     echo "Cleaned up."
 fi
 
-cd ..
+
